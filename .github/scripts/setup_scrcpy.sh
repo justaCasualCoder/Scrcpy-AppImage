@@ -1,10 +1,12 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install ffmpeg libsdl2-2.0-0 adb libusb-1.0-0 -y
-sudo apt install gcc git pkg-config meson ninja-build libsdl2-dev \
+echo "Installing packages"
+sudo add-apt-repository universe
+sudo apt install ffmpeg libsdl2-2.0-0 adb wget \
+                 gcc git pkg-config meson ninja-build libsdl2-dev \
                  libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev \
-                 libusb-1.0-0-dev -y
+                 libswresample-dev libusb-1.0-0 libusb-1.0-0-dev libfuse2
 
 sudo rm -rf scrcpy
 git clone https://github.com/Genymobile/scrcpy
