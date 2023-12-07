@@ -38,7 +38,7 @@ sudo add-apt-repository universe
 sudo apt install ffmpeg libsdl2-2.0-0 adb wget \
                  gcc git pkg-config meson ninja-build libsdl2-dev \
                  libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev \
-                 libswresample-dev libusb-1.0-0 libusb-1.0-0-dev
+                 libswresample-dev libusb-1.0-0 libusb-1.0-0-dev libfuse2
 echo "making appdir"
 ./linuxdeploy-x86_64.AppImage --appdir scrcpy_dir 1> /dev/null
 
