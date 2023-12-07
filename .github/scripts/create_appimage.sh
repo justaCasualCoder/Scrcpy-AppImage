@@ -35,7 +35,7 @@ EOF
 
 echo "Installing LibFuse"
 sudo add-apt-repository universe
-sudo apt install libfuse2 libsdl2
+sudo apt install libfuse2 libsdl2-dev libsdl2-2.0-0
 echo "making appdir"
 ./linuxdeploy-x86_64.AppImage --appdir scrcpy_dir 1> /dev/null
 
