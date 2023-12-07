@@ -38,7 +38,18 @@ jobs:
       - name: Run create appimage script
         run: $GITHUB_WORKSPACE/.github/scripts/create_appimage.sh
         shell: bash
-      
+
+      - name: Create info file
+        run: |
+           echo -e "ref: $GITHUB_REF \ncommit: $GITHUB_SHA\nbuild: $(date +"%Y-%m-%dT%H:%M:%SZ")" \
+           > info.txt
+      - name: Update nightly release
+        uses: pyTooling/Actions/releaser@r0
+        with:
+          tag: nightly
+          rm: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: ./scrcpy*.AppImage info.txt
       # upload scrcpy appimage
       - name: Upload output file
         uses: actions/upload-artifact@v3
