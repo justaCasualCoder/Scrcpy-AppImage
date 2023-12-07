@@ -48,9 +48,9 @@ cp scrcpy/scrcpy-server scrcpy_dir/usr/share/scrcpy/scrcpy-server 1> /dev/null
 
 ./linuxdeploy-x86_64.AppImage --appdir scrcpy_dir -e scrcpy/x/app/scrcpy -i scrcpy/app/data/scrcpy.png --create-desktop-file --custom-apprun=AppRun \
 -e /usr/bin/ffmpeg -e /usr/bin/ffplay  -e /usr/bin/ffprobe  -e /usr/bin/qt-faststart \
--l /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.10.0 -l /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0 \
+-l /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2 -l /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0 \
 -l /usr/lib/android-sdk/platform-tools/adb -e /usr/bin/adb \
--l /lib/x86_64-linux-gnu/libusb-1.0.so.0.2.0 -l /lib/x86_64-linux-gnu/libusb-1.0.so.0 \
+-l /lib/x86_64-linux-gnu/libusb-1.0.so.0.3.0 -l /lib/x86_64-linux-gnu/libusb-1.0.so.0 \
 -l /lib/x86_64-linux-gnu/libpango-1.0.so.0 -l /lib/x86_64-linux-gnu/libpangoft2-1.0.so.0 -l /lib/x86_64-linux-gnu/libgobject-2.0.so.0 \
 --output appimage
 
