@@ -47,6 +47,7 @@ cp scrcpy/scrcpy-server scrcpy_dir/usr/share/scrcpy/scrcpy-server 1> /dev/null
 -l /lib/x86_64-linux-gnu/libusb-1.0.so.0.3.0 -l /lib/x86_64-linux-gnu/libusb-1.0.so.0 \
 -l /lib/x86_64-linux-gnu/libpango-1.0.so.0 -l /lib/x86_64-linux-gnu/libpangoft2-1.0.so.0 -l /lib/x86_64-linux-gnu/libgobject-2.0.so.0 \
 --output appimage
+mv scrcpy*.AppImage scrcpy-x86_64-${LATEST_TAG}.AppImage
 
 echo "Done"
 
