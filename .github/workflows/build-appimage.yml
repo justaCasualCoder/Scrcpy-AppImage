@@ -43,10 +43,10 @@ jobs:
         run: |
            echo -e "ref: $GITHUB_REF \ncommit: $GITHUB_SHA\nbuild: $(date +"%Y-%m-%dT%H:%M:%SZ")" \
            > info.txt
-      - name: Update nightly release
+      - name: Update release
         uses: pyTooling/Actions/releaser@r0
         with:
-          tag: nightly
+          tag: ${{ env.LATEST_TAG }}
           rm: true
           token: ${{ secrets.GITHUB_TOKEN }}
           files: ./scrcpy*.AppImage info.txt
