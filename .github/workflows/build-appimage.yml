@@ -27,6 +27,7 @@ jobs:
          appimagever=$(curl "https://api.github.com/repos/Genymobile/scrcpy/tags" | jq -r '.[0].name')
          if $scrcpyver == $appimagever; then
              exit 78
+         fi
       # check out github repo, $GITHUB_WORKSPACE
       - uses: actions/checkout@v3
 
