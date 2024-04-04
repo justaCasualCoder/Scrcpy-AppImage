@@ -29,6 +29,8 @@ jobs:
          appimagever=$(curl "https://api.github.com/repos/Genymobile/scrcpy/tags" | jq -r '.[0].name')
          if [[ $scrcpyver == $appimagever ]]; then
              echo "should-run=false" >> $GITHUB_OUTPUT
+         else
+             echo "should-run=true" >> $GITHUB_OUTPUT
          fi
   # This workflow contains a single job called "build"
   build:
