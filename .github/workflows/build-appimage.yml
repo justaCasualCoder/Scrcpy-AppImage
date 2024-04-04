@@ -25,7 +25,7 @@ jobs:
       - run: |
          scrcpyver=$(curl "https://api.github.com/repos/Genymobile/scrcpy/tags" | jq -r '.[0].name')
          appimagever=$(curl "https://api.github.com/repos/Genymobile/scrcpy/tags" | jq -r '.[0].name')
-         if $scrcpyver == $appimagever; then
+         if [[ $scrcpyver == $appimagever ]]; then
              exit 78
          fi
       # check out github repo, $GITHUB_WORKSPACE
