@@ -22,6 +22,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - run: |
+         scrcpyver=$(curl "https://api.github.com/repos/Genymobile/scrcpy/tags" | jq -r '.[0].name')
+         appimagever=$(curl "https://api.github.com/repos/Genymobile/scrcpy/tags" | jq -r '.[0].name')
+         if $scrcpyver == $appimagever; then
+             exit 78
       # check out github repo, $GITHUB_WORKSPACE
       - uses: actions/checkout@v3
 
