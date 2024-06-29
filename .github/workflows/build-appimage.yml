@@ -26,7 +26,7 @@ jobs:
         id: "build"
         run: |
          scrcpyver=$(curl "https://api.github.com/repos/Genymobile/scrcpy/tags" | jq -r '.[0].name')
-         appimagever=$(curl "https://api.github.com/repos/Genymobile/scrcpy/tags" | jq -r '.[0].name')
+         appimagever=$(curl "https://api.github.com/repos/justaCasualCoder/Scrcpy-AppImage/tags" | jq -r '.[0].name')
          if [[ $scrcpyver == $appimagever ]]; then
              echo "should-run=false" >> $GITHUB_OUTPUT
          else
