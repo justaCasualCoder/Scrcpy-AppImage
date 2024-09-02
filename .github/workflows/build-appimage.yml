@@ -70,8 +70,11 @@ jobs:
           files: ./scrcpy*.AppImage info.txt
       # upload scrcpy appimage
       - name: Upload output file
-        uses: actions/upload-artifact@v3
+        uses: softprops/action-gh-release@v2
         with:
           name: scrcpy-x86_64-${{ env.LATEST_TAG }}.AppImage
-          path: ./scrcpy*.AppImage
+          prerelease: False
+          make_latest: "true"
+          files: |
+            ./scrcpy*.AppImage
           
