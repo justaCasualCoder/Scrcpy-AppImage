@@ -75,6 +75,7 @@ jobs:
           name: scrcpy-x86_64-${{ env.LATEST_TAG }}.AppImage
           prerelease: False
           make_latest: "true"
+          tag_name: ${{ env.LATEST_TAG }}
           files: |
             ./scrcpy*.AppImage
           
